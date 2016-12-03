@@ -5,6 +5,8 @@ class Organization < ApplicationRecord
 
   # Validations
 
+  validates :type, :presence => true
+
   validates :website, :uniqueness => true
 
   validates :website, :presence => true
