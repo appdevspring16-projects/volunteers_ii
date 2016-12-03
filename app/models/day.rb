@@ -5,4 +5,6 @@ class Day < ApplicationRecord
 
   # Validations
 
+  validates :date, :presence => true
+
 end
