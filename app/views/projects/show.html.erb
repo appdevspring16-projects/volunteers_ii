@@ -17,11 +17,11 @@
         <% end %>
       </dd>
 
-      <dt>Date</dt>
+      <dt>Day</dt>
       <dd>
         <% if @project.date.present? %>
-          <a href="/days/<%= @project.date_id %>">
-            <%= @project.date.date %>
+          <a href="/days/<%= @project.day_id %>">
+            <%= @project.date.day %>
           </a>
         <% end %>
       </dd>

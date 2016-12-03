@@ -18,13 +18,13 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      <!-- Label and input for date -->
+      <!-- Label and input for day -->
       <div class="form-group">
-        <label for="date" class="control-label">
-          Date
+        <label for="day" class="control-label">
+          Day
         </label>
 
-        <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="<%= @day.date %>">
+        <input type="text" id="day" name="day" placeholder="Day" class="form-control" value="<%= @day.day %>">
       </div>
 
       <button class="btn btn-warning">

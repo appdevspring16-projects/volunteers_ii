@@ -9,11 +9,11 @@
       <p class="lead">Narrow results:</p>
 
         <div class="form-group">
-          <%= f.label :date, "Date" %>
+          <%= f.label :day, "Day" %>
           <div class="row">
             <div class='col-md-6 mb-1'>
-              <div class='input-group date' id='dategteqPicker'>
-                  <%= f.text_field :date_gteq, :class => "form-control", :placeholder => "Date greater than or equal to" %>
+              <div class='input-group date' id='daygteqPicker'>
+                  <%= f.text_field :day_gteq, :class => "form-control", :placeholder => "Day greater than or equal to" %>
                   <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                   </span>
@@ -21,8 +21,8 @@
             </div>
 
             <div class='col-md-6'>
-              <div class='input-group date' id='datelteqPicker'>
-                  <%= f.text_field :date_lteq, :class => "form-control", :placeholder => "Date less than or equal to" %>
+              <div class='input-group date' id='daylteqPicker'>
+                  <%= f.text_field :day_lteq, :class => "form-control", :placeholder => "Day less than or equal to" %>
                   <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                   </span>
@@ -32,18 +32,18 @@
       </div>
       <script type="text/javascript">
           $(function () {
-              $('#dategteqPicker').datetimepicker({
+              $('#daygteqPicker').datetimepicker({
                   format: 'MM/DD/YYYY'
               });
-              $('#datelteqPicker').datetimepicker({
+              $('#daylteqPicker').datetimepicker({
                   useCurrent: false,
                   format: 'MM/DD/YYYY'
               });
-              $('#dategteqPicker').on("dp.change", function (e) {
-                  $('#datelteqPicker').data("DateTimePicker").minDate(e.date);
+              $('#daygteqPicker').on("dp.change", function (e) {
+                  $('#daylteqPicker').data("DateTimePicker").minDate(e.date);
               });
-              $('#datelteqPicker').on("dp.change", function (e) {
-                  $('#dategteqPicker').data("DateTimePicker").maxDate(e.date);
+              $('#daylteqPicker').on("dp.change", function (e) {
+                  $('#daygteqPicker').data("DateTimePicker").maxDate(e.date);
               });
           });
       </script>
@@ -107,13 +107,13 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>Date</th>
+        <th>Day</th>
         <th>Actions</th>
       </tr>
 
       <% @days.each do |day| %>
       <tr>
-        <td><%= day.date %></td>
+        <td><%= day.day %></td>
         <td>
           <a href="/days/<%= day.id %>" class="btn btn-primary">Show</a>
           <a href="/days/<%= day.id %>/edit" class="btn btn-warning">Edit</a>

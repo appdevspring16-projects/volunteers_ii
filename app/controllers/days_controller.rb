@@ -22,7 +22,7 @@ class DaysController < ApplicationController
   def create
     @day = Day.new
 
-    @day.date = params[:date]
+    @day.day = params[:day]
 
     save_status = @day.save
 
@@ -49,7 +49,7 @@ class DaysController < ApplicationController
   def update
     @day = Day.find(params[:id])
 
-    @day.date = params[:date]
+    @day.day = params[:day]
 
     save_status = @day.save
 

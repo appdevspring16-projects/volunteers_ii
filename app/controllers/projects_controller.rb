@@ -34,7 +34,7 @@ class ProjectsController < ApplicationController
 
     @project.name = params[:name]
     @project.location_id = params[:location_id]
-    @project.date_id = params[:date_id]
+    @project.day_id = params[:day_id]
     @project.description = params[:description]
     @project.number_of_volunteers_required = params[:number_of_volunteers_required]
     @project.organization_id = params[:organization_id]
@@ -66,7 +66,7 @@ class ProjectsController < ApplicationController
 
     @project.name = params[:name]
     @project.location_id = params[:location_id]
-    @project.date_id = params[:date_id]
+    @project.day_id = params[:day_id]
     @project.description = params[:description]
     @project.number_of_volunteers_required = params[:number_of_volunteers_required]
     @project.organization_id = params[:organization_id]

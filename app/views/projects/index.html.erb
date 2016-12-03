@@ -111,11 +111,11 @@
       </script>
 
 <div class="form-group">
-          <%= f.label :date, "Day Date" %>
+          <%= f.label :day, "Day Day" %>
           <div class="row">
             <div class='col-md-6 mb-1'>
-              <div class='input-group date' id='dategteqdatePicker'>
-                  <%= f.text_field :date_date_gteq, :class => "form-control", :placeholder => "Day Date greater than or equal to" %>
+              <div class='input-group date' id='dategteqdayPicker'>
+                  <%= f.text_field :date_day_gteq, :class => "form-control", :placeholder => "Day Day greater than or equal to" %>
                   <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                   </span>
@@ -123,8 +123,8 @@
             </div>
 
             <div class='col-md-6'>
-              <div class='input-group date' id='datelteqdatePicker'>
-                  <%= f.text_field :date_date_lteq, :class => "form-control", :placeholder => "Day Date less than or equal to" %>
+              <div class='input-group date' id='datelteqdayPicker'>
+                  <%= f.text_field :date_day_lteq, :class => "form-control", :placeholder => "Day Day less than or equal to" %>
                   <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                   </span>
@@ -134,18 +134,18 @@
       </div>
       <script type="text/javascript">
           $(function () {
-              $('#dategteqdatePicker').datetimepicker({
+              $('#dategteqdayPicker').datetimepicker({
                   format: 'MM/DD/YYYY'
               });
-              $('#datelteqdatePicker').datetimepicker({
+              $('#datelteqdayPicker').datetimepicker({
                   useCurrent: false,
                   format: 'MM/DD/YYYY'
               });
-              $('#dategteqdatePicker').on("dp.change", function (e) {
-                  $('#datelteqdatePicker').data("DateTimePicker").minDate(e.date);
+              $('#dategteqdayPicker').on("dp.change", function (e) {
+                  $('#datelteqdayPicker').data("DateTimePicker").minDate(e.date);
               });
-              $('#datelteqdatePicker').on("dp.change", function (e) {
-                  $('#dategteqdatePicker').data("DateTimePicker").maxDate(e.date);
+              $('#datelteqdayPicker').on("dp.change", function (e) {
+                  $('#dategteqdayPicker').data("DateTimePicker").maxDate(e.date);
               });
           });
       </script>
@@ -171,7 +171,7 @@
       <tr>
         <th>Name</th>
         <th>Location</th>
-        <th>Date</th>
+        <th>Day</th>
         <th>Description</th>
         <th>Number of volunteers required</th>
         <th>Organization</th>
@@ -191,7 +191,7 @@
         <td>
           <% if project.date.present? %>
             <a href="/days/<%= project.date.id %>">
-              <%= project.date.date %>
+              <%= project.date.day %>
             </a>
           <% end %>
         </td>

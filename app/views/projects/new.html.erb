@@ -36,13 +36,13 @@
         <%= select_tag(:location_id, options_from_collection_for_select(Location.all, :id, :neighborhood, @project.location_id), :class => "form-control") %>
       </div>
 
-      <!-- Label and input for date_id -->
+      <!-- Label and input for day_id -->
       <div class="form-group">
-        <label for="date_id" class="control-label">
-          Date
+        <label for="day_id" class="control-label">
+          Day
         </label>
 
-        <%= select_tag(:date_id, options_from_collection_for_select(Day.all, :id, :date, @project.date_id), :class => "form-control") %>
+        <%= select_tag(:day_id, options_from_collection_for_select(Day.all, :id, :day, @project.day_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for description -->

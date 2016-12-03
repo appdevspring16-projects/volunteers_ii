@@ -4,7 +4,8 @@ class Project < ApplicationRecord
   belongs_to :location
 
   belongs_to :date,
-             :class_name => "Day"
+             :class_name => "Day",
+             :foreign_key => "day_id"
 
   has_many   :project_skills,
              :dependent => :destroy
@@ -15,7 +16,7 @@ class Project < ApplicationRecord
 
   # Validations
 
-  validates :date_id, :presence => true
+  validates :day_id, :presence => true
 
   validates :description, :presence => true
 
