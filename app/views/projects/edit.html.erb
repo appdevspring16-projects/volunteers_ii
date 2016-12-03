@@ -42,7 +42,7 @@
           Date
         </label>
 
-        <input type="text" id="date_id" name="date_id" placeholder="Date" class="form-control" value="<%= @project.date_id %>">
+        <%= select_tag(:date_id, options_from_collection_for_select(Day.all, :id, :date, @project.date_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for description -->
